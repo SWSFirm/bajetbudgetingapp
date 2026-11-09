@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BA Jet — Personal Budgeting App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Nunito:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header shell">
+    <a class="logo" href="#home" aria-label="BA Jet home">
+      <img src="images2/jet7.png" alt="BA Jet logo" />
+    </a>
+    <nav><a href="#home">Home</a><a href="#features">Features</a><a href="#download">Download</a><a
+        href="#about">About</a></nav>
+  </header>
+  <main>
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <h1>The Best way To plan How<br>to spend your Money</h1><img data-image="gmy_welcome" alt="BA Jet illustration">
+        <p>BA Jet is your personal<br>budgeting app, designed<br>to help people take control<br>of their money.</p>
+      </div><img class="dashboard" data-image="dashboard" alt="BA Jet dashboard">
+    </section>
+    <section class="features shell" id="features">
+      <p class="label">Features</p>
+      <h2>Manage Your Financial Sources</h2><img class="wide" data-image="gmy_financial_sources_Indetail"
+        alt="Financial sources overview">
+      <div class="cards">
+        <img data-image="financial sources" alt="Financial sources">
+        <img data-image="add financial source" alt="Add financial source">
+        <img data-image="Edit Financial Source" alt="Edit financial source">
+      </div>
+      <h2 class="budget-title">Manage Your Budgets</h2><img class="wide" data-image="gmy_view_budgets_indetail"
+        alt="Budget overview">
+      <div class="cards"><img data-image="Budget menu" alt="Budget menu"><img data-image="Add Budget type"
+          alt="Add budget type"><img data-image="Edit Budget Type" alt="Edit budget type"></div>
+    </section>
+    <section class="more shell">
+      <h2>and many more features</h2><img data-image="gmy_what_is_bajet" alt="BA Jet benefits">
+    </section>
+    <section class="download shell" id="download">
+      <p class="label">Download...</p><img data-image="download app today" alt="Download app today"><a href="#"
+        class="button">Download Today 7 Day Trial</a>
+    </section>
+    <section class="about shell" id="about">
+      <p class="label">About</p>
+      <div>
+        <aside>
+          <img data-image="jet7" alt="BA Jet aircraft logo">
+          <a href="#download" class="button">Download Today</a>
+        </aside>
+        <nav><a href="#home">Home</a><a href="#features">Features</a><a href="#download">Download</a><a
+            href="#about">About</a></nav>
+        <p>Hi I’m Sims, BA Jet is a personal budgeting app I made for myself. Version 2.0 is an upgrade to the UI of the
+          original version. Feel free to give the app a try and see what it does for you. For more from me,
+          check out my <a href="https://swsfirm.github.io/my_Uidesign_Portfolio/" target="_blank" rel="noopener noreferrer">UI Design Portfolio</a>..</p>
+      </div>
+    </section>
+  </main>
+  <button class="back-to-top" type="button" aria-label="Back to top"></button>
+  <footer>Designed | Developed By: <a href="mailto:residenttechnician@gmail.com">residenttechnician@gmail.com</a> |
+    <a href="https://wa.me/0977178883" target="_blank" rel="noopener noreferrer">WhatsApp</a></footer>
+  <script>
+    const exts = ['png', 'jpg', 'jpeg', 'webp'];
+    document.querySelectorAll('[data-image]').forEach(el => {
+      let i = 0;
+      const load = () => {
+        if (i === exts.length) {
+          el.hidden = true;
+          return
+        }
+        el.src = `images2/${encodeURIComponent(el.dataset.image)}.${exts[i++]}`
+      };
+      el.onerror = load;
+      load()
+    });
+
+    document.querySelector('.back-to-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>

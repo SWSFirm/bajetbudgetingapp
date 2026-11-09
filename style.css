@@ -1,0 +1,402 @@
+:root {
+    --ink: #17171b;
+    --purple: #8141dd;
+    --yellow: #fdc901
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font: 900 16px Nunito, Arial, sans-serif
+}
+
+.shell {
+    width: min(1440px, calc(100% - 64px));
+    margin: auto
+}
+
+.header {
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none
+}
+
+.logo img {
+    display: block;
+    width: 110px;
+    height: auto;
+    object-fit: contain
+}
+
+.header nav {
+    display: flex;
+    gap: 28px
+}
+
+.header nav a,
+.about nav a {
+    font: 16px 'Paytone One';
+    color: var(--ink);
+    text-decoration: none
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.15fr .55fr;
+    gap: 100px;
+    align-items: center;
+    padding: 80px 120px 120px
+}
+
+.hero-copy {
+    text-align: center
+}
+
+.hero h1,
+h2 {
+    margin: 0;
+    font: 32px/1.16 'Paytone One'
+}
+
+.hero h1 {
+    font-size: 46px
+}
+
+.hero-copy img {
+    display: block;
+    width: min(600px, 100%);
+    height: 385px;
+    object-fit: contain;
+    margin: 26px auto
+}
+
+.hero-copy p,
+.about p {
+    font: 25px/1.38 'Paytone One';
+    margin: 0
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 320px;
+    max-height: 685px;
+    object-fit: contain
+}
+
+.features {
+    padding-bottom: 125px
+}
+
+.label {
+    font: 28px 'Paytone One';
+    margin: 0 0 18px
+}
+
+.features h2,
+.more h2 {
+    text-align: center
+}
+
+.wide {
+    display: block;
+    width: min(690px, 100%);
+    max-height: 470px;
+    object-fit: contain;
+    margin: 38px auto 70px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 78px;
+    max-width: 1100px;
+    margin: auto
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    object-fit: contain
+}
+
+.budget-title {
+    margin-top: 112px !important
+}
+
+.more {
+    text-align: center;
+    padding-bottom: 120px
+}
+
+.more h2 {
+    margin-bottom: 36px
+}
+
+.more img {
+    width: min(690px, 100%);
+    max-height: 460px;
+    object-fit: contain
+}
+
+.download {
+    padding-bottom: 105px
+}
+
+.download>img {
+    display: block;
+    width: min(490px, 100%);
+    max-height: 330px;
+    object-fit: contain;
+    margin: 30px auto 20px
+}
+
+.button {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    min-width: 490px;
+    height: 25px;
+    margin: auto;
+    
+    background: var(--purple);
+    box-shadow: inset 0 -4px #5f20bd;
+    border-radius: 15px;
+    color: var(--yellow);
+    font: 23px 'Paytone One';
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.download>img {
+    display: block;
+    width: 490px;
+    max-width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    margin: 30px auto 20px
+}
+
+.about {
+    padding-bottom: 85px
+}
+.about p a {
+  color: #8141dd;
+  text-decoration: none;
+}
+
+.about>div {
+    display: grid;
+    grid-template-columns: 1fr .58fr 1fr;
+    gap: 72px;
+    align-items: center
+}
+
+.about aside {
+    text-align: center
+}
+
+.about aside img {
+    display: block;
+    width: 260px;
+    height: 220px;
+    object-fit: contain;
+    margin: auto
+}
+
+.about aside .button {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    height: 25px;
+    margin: 16px auto 0;
+    font-size: 17px;
+    padding: 13px 20px;
+    min-width: 0;
+    line-height: 22px;
+    border-radius: 15px
+}
+
+.about nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.about nav a {
+    font-size: 28px;
+    line-height: 1.05
+}
+
+.about p {
+    font-size: 24px;
+    line-height: 1.2
+}
+
+footer {
+    border-top: 1px solid #eee;
+    padding: 35px 20px;
+    text-align: center;
+    font: 15px 'Paytone One'
+}
+
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 52px;
+    height: 52px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--purple);
+    box-shadow: 0 10px 22px rgba(129, 65, 221, .28);
+    cursor: pointer;
+    z-index: 20;
+    position: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.back-to-top::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 16px solid var(--yellow);
+    transform: translateY(-2px);
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none
+}
+
+@media(max-width:760px) {
+    .shell {
+        width: min(100% - 30px, 560px)
+    }
+
+    .header {
+        height: 75px
+    }
+
+    .logo {
+        font-size: 22px
+    }
+
+    .header nav {
+        gap: 10px
+    }
+
+    .header nav a {
+        font-size: 11px
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 0 70px
+    }
+
+    .hero h1 {
+        font-size: 31px
+    }
+
+    .hero-copy img {
+        height: 250px
+    }
+
+    .hero-copy p {
+        font-size: 18px
+    }
+
+    .dashboard {
+        max-width: 270px;
+        margin: auto
+    }
+
+    .features {
+        padding-bottom: 75px
+    }
+
+    .label {
+        font-size: 22px
+    }
+
+    .features h2,
+    .more h2 {
+        font-size: 25px
+    }
+
+    .wide {
+        margin: 25px auto 42px
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 250px
+    }
+
+    .budget-title {
+        margin-top: 70px !important
+    }
+
+    .more {
+        padding-bottom: 70px
+    }
+
+    .more img {
+        max-height: 280px
+    }
+
+    .download {
+        padding-bottom: 70px
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 14px 16px
+    }
+
+    .about {
+        padding-bottom: 55px
+    }
+
+    .about>div {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center
+    }
+
+    .about p {
+        font-size: 17px
+    }
+
+    .about nav a {
+        font-size: 22px
+    }
+
+    footer {
+        font-size: 11px;
+        padding: 25px 10px
+    }
+}
+:root{font-family:'Paytone One',sans-serif}body{font-family:'Paytone One',sans-serif!important;font-weight:400!important}.button{height:64px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-family:'Paytone One',sans-serif!important;font-weight:400!important}
